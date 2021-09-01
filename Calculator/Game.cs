@@ -6,8 +6,7 @@ namespace Calculator
 {
     class Game
     {
-        bool quit = false;
-        bool stop = false;
+        bool quit = false;      
 
         float Add(float num1, float num2)
         {
@@ -141,19 +140,14 @@ namespace Calculator
             }
             else if (input == 5)
             {                            
-                stop = true;
+                quit = true;
             }
         }
         public void Run()
         {
            while (!quit)
             {
-                Calculation();   
-                
-                if (stop == true)
-                {
-                    quit = true;
-                }
+                Calculation();                 
             }
             
         }
