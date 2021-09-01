@@ -6,7 +6,10 @@ namespace Calculator
 {
     class Game
     {
-        bool quit = false;      
+        bool quit = false;
+        string value;
+        float number1;
+        float number2;
 
         float Add(float num1, float num2)
         {
@@ -76,6 +79,11 @@ namespace Calculator
             return inputRecieved;
         }
 
+       float GetValidNum()
+        {
+            return 0;
+        }
+
         void Calculation()
         {
             string value1;
@@ -91,10 +99,10 @@ namespace Calculator
                 Console.WriteLine("Addition");
                 Console.Write("First Number > ");
                 value1 = Console.ReadLine();
-                Single.TryParse(value1, out num1);
+                float.TryParse(value1, out num1);
                 Console.Write("Second Number > ");
                 value2 = Console.ReadLine();
-                Single.TryParse(value2, out num2);
+                float.TryParse(value2, out num2);
                 float result = Add(num1, num2);
                 Console.WriteLine(result);
 
@@ -104,11 +112,11 @@ namespace Calculator
                 Console.Clear();
                 Console.WriteLine("Subtraction");
                 Console.Write("First Number > ");
-                value1 = Console.ReadLine();
-                Single.TryParse(value1, out num1);
+                value1 = Console.ReadLine();              
+                float.TryParse(value1, out num1);
                 Console.Write("Second Number > ");
                 value2 = Console.ReadLine();
-                Single.TryParse(value2, out num2);
+                float.TryParse(value2, out num2);
                 float result = Subtract(num1, num2);
                 Console.WriteLine(result);
             }
@@ -118,10 +126,10 @@ namespace Calculator
                 Console.WriteLine("Multiplication");
                 Console.Write("First Number > ");
                 value1 = Console.ReadLine();
-                Single.TryParse(value1, out num1);
+                float.TryParse(value1, out num1);
                 Console.Write("Second Number > ");
                 value2 = Console.ReadLine();
-                Single.TryParse(value2, out num2);
+                float.TryParse(value2, out num2);
                 float result = Multiply(num1, num2);
                 Console.WriteLine(result);
             }
@@ -131,10 +139,10 @@ namespace Calculator
                 Console.WriteLine("Division");
                 Console.Write("First Number > ");
                 value1 = Console.ReadLine();
-                Single.TryParse(value1, out num1);
+                float.TryParse(value1, out num1);
                 Console.Write("Second Number > ");
                 value2 = Console.ReadLine();
-                Single.TryParse(value2, out num2);
+                float.TryParse(value2, out num2);
                 float result = Divide(num1, num2);
                 Console.WriteLine(result);
             }
